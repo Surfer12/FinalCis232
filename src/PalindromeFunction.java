@@ -46,32 +46,79 @@ public class PalindromeFunction {
           // equal to eachother
         return isPalindrome;
     }
+
 }
 
-// Remove string from the input parameter
+    // Remove string from the input parameter
+    // Use of pointers, rather than nested for loops
 
-// Improved version The optimized version will use two pointers to check for
-// palindromes in
+    // Improved version The optimized version will use two pointers to check for
+    // palindromes in
 
-public static boolean isPalindrome(String str) {
-    if (str == null)
-        return false;
-    int left = 0;
-    int right = str.length() - 1;
-    str = str.toLowerCase(); // Convert to lowercase for case-insensitive comparison
+    public static boolean isPalindrome(String str) {
+        if (str == null)
+            return false;
+        int left = 0;
+        int right = str.length() - 1;
+        str = str.toLowerCase(); // Convert to lowercase for case-insensitive comparison
 
-    while (left < right) {
-        // Skip non-alphanumeric characters (if considering such cases)
-        while (left < right && !Character.isLetterOrDigit(str.charAt(left)))
-            left++;
-        while (left < right && !Character.isLetterOrDigit(str.charAt(right)))
-            right--;
+        while (left < right) {
+            // Skip non-alphanumeric characters (if considering such cases)
+            while (left < right && !Character.isLetterOrDigit(str.charAt(left)))
+                left++;
+            while (left < right && !Character.isLetterOrDigit(str.charAt(right)))
+                right--;
 
-        if (str.charAt(left) != str.charAt(right)) {
-            return false; // Characters do not match
+            if (str.charAt(left) != str.charAt(right)) {
+                return false; // Characters do not match
+            }
+            left++; // Move rightward
+            right--; // Move leftward
         }
-        left++; // Move rightward
-        right--; // Move leftward
+        return true; // All characters matched
     }
-    return true; // All characters matched
+
+    /*
+     * ###Explanation:-**Two Pointers**:
+     * One pointer starts at the beginning (`left`) and the other at the end
+     * (`right`) of the string.
+     * 
+     * - **Loop**: The loop continues until the two pointers meet in the middle.
+     * - **Character Check**: If characters at the pointers do not match, it returns
+     * `false`.
+     * - **Skipping Non-Alphanumeric**: If considering palindromes with only
+     * alphanumeric characters, it skips other characters.
+     * - **Time Complexity**: \(O(n)\) where `n` is the length of the string, as
+     * each character is checked at most twice.
+     * - **Space Complexity**: \(O(1)\) since no additional space is used
+     * proportional to the input size.
+     * 
+     * This method is more efficient and adheres to the problem constraints more
+     * strictly, providing a clear and concise solution to checking palindromes.
+     */
+
+ {
+    "Two Pointer Technique in LinkedList": {
+        "prefix": "twopointerlinkedlist",
+        "body": [
+            "class ListNode {",
+            "    int val;",
+            "    ListNode next;",
+            "    ListNode(int x) { val = x; }",
+            "}",
+            "",
+            "public static boolean hasCycle(ListNode head) {",
+            "    if (head == null) return false;",
+            "    ListNode slow = head;",
+            "    ListNode fast = head.next;",
+            "    while (fast != null && fast.next != null) {",
+            "        if (slow == fast) return true; // Cycle detected",
+            "        slow = slow.next; // Move slow pointer by 1",
+            "        fast = fast.next.next; // Move fast pointer by 2",
+            "    }",
+            "    return false; // No cycle found",
+            "}"
+        ],
+        "description": "Check if a linked list has a cycle using two-pointer technique."
+    }
 }
