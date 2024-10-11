@@ -12,3 +12,4 @@ plugins {
 
 rootProject.name = 'FinalCis232'
 include('app')
+include('test')
