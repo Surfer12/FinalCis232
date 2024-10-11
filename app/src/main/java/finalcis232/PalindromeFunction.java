@@ -20,6 +20,9 @@ The code uses meaningful variable names and includes comments where appropriate.
 Time Complexity (5%):
 The answer accurately describes the time complexity of the chosen approach.
 The reasoning behind the time complexity analysis is clearly explained. */
+
+package finalcis232;
+
 import java.util.Scanner;
 
 public class PalindromeFunction {

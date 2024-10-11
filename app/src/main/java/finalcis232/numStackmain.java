@@ -1,3 +1,5 @@
+package finalcis232;
+
 import java.util.*;
 /* Analyze the
     following code

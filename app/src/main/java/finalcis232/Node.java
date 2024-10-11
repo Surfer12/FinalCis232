@@ -1,3 +1,5 @@
+package finalcis232;
+
 class Node {
     int data;
     Node next;

@@ -1,3 +1,5 @@
+package finalcis232;
+
 public class Alt1 {
     private String inputWord;
     private boolean isPalindrome;
