@@ -1,4 +1,3 @@
-package finalcis232;
 
 class LinkedList {
     Node head;

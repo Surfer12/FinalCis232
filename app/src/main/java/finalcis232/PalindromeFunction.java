@@ -21,10 +21,8 @@ Time Complexity (5%):
 The answer accurately describes the time complexity of the chosen approach.
 The reasoning behind the time complexity analysis is clearly explained. */
 
-package finalcis232;
-
 import java.util.Scanner;
-
+@SuppressWarnings("all")
 public class PalindromeFunction {
     private String inputWord; // Initalizes inputWord variable
     boolean isPalindrome; // Initalizes boolean isPalindrome

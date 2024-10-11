@@ -1,4 +1,4 @@
-package finalcis232;
+
 
 /**
  * This class provides a method to check if a given string is a palindrome using
